@@ -1,0 +1,59 @@
+
+ 
+ <h1>student grade book</h1>
+  <table border="1">
+    <th>StudentName</th>
+    <th>Total Marks</th>
+    <th>Grade</th>
+
+    <script>
+    for (let i = 0; i < 5; i++) {
+        // Prompt for student information
+        let studentName = prompt(`Enter Student ${i + 1} Name:`);
+        let htmlMarks = parseInt(prompt(`Enter HTMLMarks for ${studentName}:`));
+        let cssMarks = parseInt(prompt(`Enter CSS Marks for ${studentName}:`));
+        let jsMarks = parseInt(prompt(`Enter JavaScript Marks for ${studentName}:`));
+
+        // Calculate the total marks
+        let totalMarks = htmlMarks + cssMarks + jsMarks;
+        
+        // Determine the grade based on the total marks using a switch statement
+
+
+        let average =totalMarks/3                 
+        var grade='A'
+        switch(average){
+            case (average <= 100 || average>=90):
+                var  grade="B"
+                break;
+
+            case (  average <= 90 || average >=80):
+                  
+              var grade ="C"
+                break;
+
+            case (average <= 80 || average >=70):
+                    
+                   var grade="D"
+                break;
+
+            case (average <= 70 || average >=60):
+                 
+                var grade="E"
+                break;
+            case (average <= 60 || average >=50):
+               var grade='F'}
+
+            
+
+
+               document.write('<tr>')
+            document.write('<td>' + studentName + '</td>')
+            document.write('<td>' +totalMarks + '</td>')
+            document.write('<td>' + Grade + '</td>')
+            document.write('</tr>')
+
+        
+    }
+        </script>
+        

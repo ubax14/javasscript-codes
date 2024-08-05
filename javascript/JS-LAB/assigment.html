@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assigment </title>
+    <style>
+        
+    th,td{
+            padding: 5px;
+             border: 2px solid black;  
+        }
+       h1{ 
+             margin-left: 88px; 
+        }
+        table{
+                border-collapse: collapse;  
+              margin-left: 100px; 
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>student grade book</h1>
+  <table border="1">
+    <th>StudentName</th>
+    <th>Total Marks</th>
+    <th>Grade</th>
+
+    <script>
+    for (let i = 0; i < 5; i++) {
+        let studentName = prompt(`Enter Student ${i + 1} Name:`);
+        let htmlMarks = parseInt(prompt(`Enter HTML Marks for ${studentName}:`));
+        let cssMarks = parseInt(prompt(`Enter CSS Marks for ${studentName}:`));
+        let jsMarks = parseInt(prompt(`Enter JavaScript Marks for ${studentName}:`));
+
+        let totalMarks = htmlMarks + cssMarks + jsMarks
+           let precentage =(totalMarks/300)*100    
+                       
+            let grade ;
+            switch (true) {
+                case ( precentage >90):
+                    grade = 'A'
+                      break;
+                case ( precentage >=80) :
+                    grade = 'B'
+                    break;
+                case ( precentage >=70):
+                    grade = 'C'
+                      break;
+                case ( precentage >=60):
+                    grade = 'D'
+                      break;
+                
+                default: 
+                grade = 'F'
+                      break;
+            }
+            
+
+               document.write('<tr>')
+            document.write(`<td>  ${studentName} </td>`)            
+            document.write('<td>' ,totalMarks , '</td>')
+            document.write('<td>' , grade , '</td>')
+            document.write('</tr>')
+
+        
+    }
+        </script>
+       </table>
+</body>
+</html>

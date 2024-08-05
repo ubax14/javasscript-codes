@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .valid{
+            color: green;
+        }
+       .submit{
+            color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keybourd event example</title>
+</head>
+<body>
+    <form action="" id="myform">
+    <input type="text" id="textinput" placeholder="type somthing">
+     <button type="submit">submit</button>
+</form>  
+  <div id="output"></div>
+    <script>
+        // const textinput = document.getElementById("textinput")
+        // const outputdiv= document.getElementById('output')
+        // textinput.addEventListener("keydown",function(event){
+        //     outputdiv.innerText=`keydown:${event.key}`});
+
+        //     textinput.addEventListener("keypress",function(event){
+        //         outputdiv.innerText=`\nkeypress:${event.key}`});
+
+        //         textinput.addEventListener("keyup",function(event){
+        //             outputdiv.innerText=`\nkeyup:${event.key}`})
+
+
+        // const textinput = document.getElementById('textinput');
+        // const outputdiv = document.getElementById('output');
+        // textinput.addEventListener("focus",function(){
+        //     updeOutput("element focused!","focused")
+        // });
+
+        // textinput.addEventListener("blur",function(){
+        //     updeOutput("element blurred!","blurred")
+        // });
+
+
+    //   function updeOutput(massage,className){
+    //     outputdiv.innerText=massage;
+    //     outputdiv.innerHTML=className;
+    //   };
+
+
+    const textinput = document.getElementById("textinput");
+    const outputdiv=document.getElementById("output")
+    const form = document.getElementById("myform")
+    textinput.addEventListener("input",function(){
+        if(textinput.value != ""){
+            updateOutput("valid","input changed!")
+        }else{updateOutput("invalid","input changed with emty!")}
+    });
+   form.addEventListener("submit",function(event){
+    event.preventDefault();
+    updateOutput("valid",alert("form submited"));
+   });
+   function updateOutput(massage,className){
+    outputdiv.innerText=massage;
+    outputdiv.innerText=className;
+   }
+    </script>
+</body>
+</html>

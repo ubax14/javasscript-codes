@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array practicing</title>
+</head>
+<body>
+ <script>
+    //ex1 literal arrays
+    const name =["ahmed","muhamed","ali"]
+
+    //  for(let i = 0; i < name.length; i++){
+    //     console.log(name[i])
+    //  }
+     name.forEach(function(nam){
+      console.log(nam)
+     })
+
+// modifiying array adding element at the end
+    name.push("farxaan")
+// modifiying array adding element at the begining
+ name.unshift("yaxye")
+//remove element at the end using pop method
+  name.pop();
+//remove elements  using splice method
+ name.splice(0,1)
+    console.log('array liiteral',name)
+    document.write(name)
+
+    // ex2 Array constructor
+    const names = new Array("xamdo","farxiyo","maryamo")
+    names.splice(0,2)
+    console.log('array constructor',names)
+
+    // ex3 empty Array
+    const myarray = [];
+    myarray[0]="first"
+    myarray[1]="second"
+    document.write(myarray)
+console.log('empty aray',myarray)
+//ex4 Array.from
+const arrayfromstr=Array.from("hello")
+document.write(arrayfromstr)
+console.log('aray.from',arrayfromstr)
+
+
+// ex5 Array initializer
+const newarry = new Array(1,2,3)
+document.write(newarry)
+console.log('aray initializer',newarry)
+
+
+
+//ex6 spread operator
+
+const sourcearray = [1,2,3]
+
+const nearry=[0,1,2,sourcearray]
+document.write(nearry)
+console.log('spread operator',sourcearray)
+
+
+// ex7 array.of
+ const myary= Array.of(1,2,3)
+ console.log('array.of',myary)
+ // USING MAP CREATE NEW ELEMENT
+ const numbers=[1,2,3]
+ const squernumber= numbers.map((num) => num*num);
+ console.log(squernumber)
+ </script>   
+</body>
+</html>

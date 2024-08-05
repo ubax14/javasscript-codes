@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        ul{
+            cursor: pointer;
+        }
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px;
+            background-color: #eee;
+        }
+        li:hover{
+            background-color: #ddd;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="parentlist">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+
+    <script>
+        const parentlist=document.getElementById('parentlist')
+        // event deligation with single event listener on the parent element
+
+        parentlist.addEventListener('click',function(){
+            if(event.target.tagName ==="LI"){
+                alert("click on"+ event.target.innerText)
+            }
+        })
+    </script>
+</body>
+</html>

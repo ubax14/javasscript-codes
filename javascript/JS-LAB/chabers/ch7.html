@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mybutton">click me</button>
+    <button onclick="myfunction()">click me</button>
+
+    <script>
+        // function myfunction(){
+        //    alert 
+        // }
+        
+        // const element = document.getElementById("mybutton");
+        // element.addEventListener("click" ,myfuntion)
+        // function myfuntion(){
+        //     alert('button clicked')
+        // }
+
+        let element = document.getElementById("mybutton")
+        // mouseover Event
+        element.addEventListener("mouseover",function(){
+            element.style.backgroundColor="green"
+            alert("hey i'm ubah")
+        });
+        // mouseout event
+        element.addEventListener("mouseout",function(){
+            element.style.backgroundColor="blue"
+        });
+    </script>
+</body>
+</html>

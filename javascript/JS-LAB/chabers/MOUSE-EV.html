@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event practice</title>
+</head>
+<body>
+    <div class="box">klick me</div>
+
+    <script>
+        var box =document.querySelector('.box');
+        // mouseover event
+        box.addEventListener('mouseover',function(){
+            box.style.bacgroundColor='lightgreen'
+            box.textContent='mouse over';
+        });
+        // mouseout event
+        box.addEventListener('mouseout',function(){
+            box.style.bacgroundColor='lightblue';
+            box.textContent='mouse out'
+        });
+
+        // mousedown event
+        box.addEventListener('mousedown',function(){
+            box.style.bacgroundColor='lightpink';
+            box.textContent='mouse down'
+        });
+
+        // klick event
+        box.addEventListener('klick',function(){
+            box.style.bacgroundColor='yellow';
+            box.textContent='klicked!'
+        })
+    </script>
+</body>
+</html>

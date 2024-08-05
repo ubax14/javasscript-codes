@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM getElementsByClassName and getElementsByTagName Example</title>
+</head>
+
+<body>
+    <div class="box">
+        <p class="box-content">This is the content of the box.</p>
+    </div>
+    <div class="box">
+        <p class="box-content">Another box with different content.</p>
+    </div>
+    <script>
+
+        // Selecting elements by class name
+        let boxElements = document.getElementsByClassName("box");
+
+        for (let i = 0; i < boxElements.length; i++) {
+            boxElements[i].style.border = "3px dashed green";
+        }
+
+        // Selecting elements by tag name
+        let paragraphElements = document.getElementsByTagName("p");
+
+        for (let i = 0; i < paragraphElements.length; i++) {
+            paragraphElements[i].style.fontSize = "20px";
+
+        }
+
+        //quarySelector
+        let firstParagraph = document.querySelector("p")
+        console.log(firstParagraph)
+        let firstBox = document.querySelector(".box")
+        console.log(firstBox)
+
+        //quarySelectorAll
+        let allParagraphs = document.querySelectorAll("p")
+        console.log(allParagraphs)
+        let AllBoxes = document.querySelector("div.box")
+        console.log(AllBoxes)
+
+    </script>F
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>page Title</title>
+    <style>
+        body {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="try"></div>
+    <script>
+
+        //Javascript innerHTML vs innerText
+        document.getElementById("try").innerText = "<b>hi</b>";
+        document.getElementById("try").innerHTML = "<b>hi</b>";
+    </script>
+</body>
+
+</html>
